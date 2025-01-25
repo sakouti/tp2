@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Net-flix - Apropos</title>
+
+  <!-- Lien vers Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Lien vers les icônes Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="../CSS/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Titre Netflix en haut -->
+    <header class="text-center mt-4 mb-3">
+      <h1 class="text-netflix">Apropos</h1>
+    </header>
+  
+    <!-- Barre de navigation (Menu) -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto"> <!-- Centrer le menu -->
+            <li class="nav-item">
+              <a class="nav-link " href="../pages/Home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="pages/Apropos.html">Apropos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/Contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/Login.html">Inscription</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+   
+    <!-- Slider (Carousel) -->
+  <div id="carouselExample" class="carousel slide mt-4" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../images/drama.jpg" class="d-block w-100" alt="Slide 1">
+          <div class="text-center mt-3">
+            <h5>Film Dramatique</h5>
+            <p>Les films dramatiques explorent des thèmes sérieux et émotionnels.</br>  Ils se concentrent souvent sur les relations humaines, les conflits internes ou les dilemmes moraux.</br> Ces films cherchent à provoquer une réaction émotionnelle forte chez le spectateur et à raconter des histoires réalistes et profondes.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../images/comedy.jpg" class="d-block w-100" alt="Slide 2">
+          <div class="text-center mt-3">
+            <h5>Film Comique</h5>
+            <p>Les films comiques visent à divertir et faire rire les spectateurs grâce à des situations amusantes, </br>des dialogues humoristiques ou des personnages exagérés.</br> Les comédies peuvent également inclure des éléments d'autres genres, comme l'amour ou l'action.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../images/action.jpg" class="d-block w-100" alt="Slide 3">
+          <div class="text-center mt-3">
+            <h5>Film d’Action</h5>
+            <p>Les films d’action sont remplis de scènes spectaculaires, comme des courses-poursuites, des explosions, des combats et des cascades.</br> L'intrigue tourne souvent autour de la lutte entre le héros et le méchant, avec beaucoup de tension et d'adrénaline.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../images/horor.jpg" class="d-block w-100" alt="Slide 2">
+          <div class="text-center mt-3">
+            <h5>Film d'Horreur</h5>
+            <p>Les films d'horreur sont conçus pour effrayer, choquer et provoquer des sensations fortes chez le spectateur.</br> Ils explorent des thèmes sombres et inquiétants, souvent liés au surnaturel, aux monstres, aux psychopathes ou aux peurs psychologiques. </br>L'objectif est de maintenir une tension constante et de plonger le spectateur dans une atmosphère angoissante.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../images/aventir.jpg" class="d-block w-100" alt="Slide 3">
+          <div class="text-center mt-3">
+            <h5>Film d’Aventure</h5>
+            <p>Les films d’aventure emmènent les spectateurs dans des lieux exotiques ou dangereux et suivent les péripéties des personnages dans leur quête ou leur exploration.</br> Ils mettent souvent en scène des défis, des découvertes et des voyages épiques.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../images/romainc.jpg" class="d-block w-100" alt="Slide 3">
+          <div class="text-center mt-3">
+            <h5>Film Romantique</h5>
+            <p>Les films romantiques se concentrent sur les histoires d'amour entre les personnages principaux. </br>Ils explorent souvent les émotions liées à l'amour, comme la passion, la jalousie, le sacrifice et les obstacles à surmonter pour être ensemble. </br>Ils peuvent être joyeux, tragiques ou un mélange des deux.</p>
+          </div>
+        </div>
+      </div>    
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    </div>
+  </div>
+  <div class="container mt-5">
+
+    <!-- Section image et vidéo en ligne -->
+    <div class="d-flex justify-content-center">
+      
+      <!-- Image -->
+      <div class="me-4">
+        <button id="showImageBtn" class="btn btn-primary">Regardez l'image</button>
+        <div id="imageContainer" style="display: none;">
+          <iframe width="700" height="500" src="../images/drama.jpg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Vidéo -->
+      <div>
+        <button id="showVideoBtn" class="btn btn-primary">Regardez la vidéo</button>
+        <div id="videoContainer" style="display: none;">
+          <iframe width="700" height="500" src="../images/video.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+
+  <!-- Footer avec logos des réseaux sociaux -->
+  <footer class="text-center mt-5 py-3">
+    <p>&copy; 2024 Netflix. Tous droits réservés.</p>
+    <div class="social-icons d-flex justify-content-center">
+      <a href="https://www.facebook.com" class="mx-2" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="https://www.twitter.com" class="mx-2" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="https://www.instagram.com" class="mx-2" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+      <a href="https://www.linkedin.com" class="mx-2" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    // Cacher ou afficher l'image
+    document.getElementById('showImageBtn').addEventListener('click', function() {
+      const imageContainer = document.getElementById('imageContainer');
+      if (imageContainer.style.display === 'none') {
+        imageContainer.style.display = 'block';
+      } else {
+        imageContainer.style.display = 'none';
+      }
+    });
+
+    // Cacher ou afficher la vidéo
+    document.getElementById('showVideoBtn').addEventListener('click', function() {
+      const videoContainer = document.getElementById('videoContainer');
+      if (videoContainer.style.display === 'none') {
+        videoContainer.style.display = 'block';
+      } else {
+        videoContainer.style.display = 'none';
+      }
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

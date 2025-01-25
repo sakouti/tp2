@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription</title>
+  
+  <!-- Lien vers Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Lien pour les icônes Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="../CSS/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Titre Netflix en haut -->
+    <header class="text-center mt-4 mb-3">
+        <h1 class="text-netflix">Inscription</h1>
+    </header>
+    
+    <!-- Barre de navigation (Menu) -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto"> <!-- Centrer le menu -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/Home.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/Apropos.html">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/Contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="pages/Login.html">Connexion</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  
+    <div class="container mt-5">
+        <div class="card p-4 shadow-sm mx-auto" style="max-width: 500px;">
+            <h4 class="text-center mb-3">Créez votre compte</h4>
+            <p class="text-center fw-bold mb-4 text-netflix">NET-FLIX</p>
+
+            <form id="signupform">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Nom d'utilisateur :</label>
+                    <input type="text" id="username" class="form-control" placeholder="Entrez votre nom d'utilisateur" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email :</label>
+                    <input type="email" id="email" class="form-control" placeholder="Adresse@e-mail.com" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Mot de passe :</label>
+                    <input type="password" id="password" class="form-control" placeholder="•••••••••" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="confirmepassword" class="form-label">Confirmez le mot de passe :</label>
+                    <input type="password" id="confirmepassword" class="form-control" placeholder="•••••••••" required>
+                </div>
+
+                <div class="d-flex">
+                    <button type="submit" class="btn btn-primary w-50 me-2">S'inscrire</button>
+                    <button type="reset" class="btn btn-secondary w-50">Réinitialiser</button>
+                </div>
+            </form>
+
+            <div id="message" class="alert alert-success mt-3" style="display: none;">
+                Votre inscription a bien été prise en compte !
+            </div>
+
+            <div class="text-center mt-3">
+                <a href="Login.html" class="text-decoration-none" style="color: red;">Déjà un compte ? Connectez-vous</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer avec logos des réseaux sociaux -->
+    <footer class="text-center mt-5 py-3">
+        <p>&copy; 2024 Netflix. Tous droits réservés.</p>
+        <div class="social-icons d-flex justify-content-center">
+            <a href="https://www.facebook.com" class="mx-2" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="https://www.twitter.com" class="mx-2" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://www.instagram.com" class="mx-2" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://www.linkedin.com" class="mx-2" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+    </footer>
+
+    <!-- Lien vers Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Sélectionner le formulaire et le message
+        const form = document.getElementById('signupform');
+        const message = document.getElementById('message');
+
+        // Ajouter un événement lors de la soumission du formulaire
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();  // Empêcher la soumission du formulaire
+
+            // Récupérer les valeurs des champs
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmepassword').value;
+
+            // Vérifier si les mots de passe correspondent
+            if (password === confirmPassword) {
+                // Afficher le message de succès
+                message.style.display = 'block';
+            } else {
+                // Si les mots de passe ne correspondent pas, afficher une alerte
+                alert('Les mots de passe ne correspondent pas.');
+            }
+        });
+    </script>
+</body>
+
+</html>

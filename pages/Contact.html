@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Net-flix - Contact</title>
+
+  <!-- Lien vers Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Lien vers les icônes Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="../CSS/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Titre Netflix en haut -->
+    <header class="text-center mt-4 mb-3">
+      <h1 class="text-netflix">Contact</h1>
+    </header>
+  
+    <!-- Barre de navigation (Menu) -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto"> <!-- Centrer le menu -->
+            <li class="nav-item">
+              <a class="nav-link " href="../pages/Home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/Apropos.html">Apropos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="pages/Contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../pages/Login.html">Inscription</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  <main class="container mt-5">
+    <div class="card p-4 shadow-sm mx-auto" style="max-width: 800px;">
+      <h4 class="text-center mb-3">Contactez-nous</h4>
+      <section>
+        <div class="mb-3">
+          <label for="name" class="form-label">Nom</label>
+          <input type="text" id="name" class="form-control" placeholder="Votre nom">
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" id="email" class="form-control" placeholder="Adresse@e-mail.com">
+        </div>
+
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea id="message" class="form-control" rows="4" placeholder="Votre message"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Envoyer</button>
+      </section>
+    </div>
+  </main>
+
+ 
+
+
+  
+
+  <!-- Footer avec logos des réseaux sociaux -->
+  <footer class="text-center mt-5 py-3">
+    <p>&copy; 2024 Netflix. Tous droits réservés.</p>
+    <div class="social-icons d-flex justify-content-center">
+      <a href="https://www.facebook.com" class="mx-2" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="https://www.twitter.com" class="mx-2" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="https://www.instagram.com" class="mx-2" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+      <a href="https://www.linkedin.com" class="mx-2" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>
+  </footer>
+<!-- Google Maps API -->
+<script src="https://maps.google.com/maps/api/js?key=AIzaSyCW16SmpzDNLsrP-npQii6_8vBu_EJvEjA"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&v=weekly"></script>
+
+<!-- Google Maps JS -->
+<script src="../assets/libs/gmaps/gmaps.min.js"></script>
+<script src="../assets/js/google-maps.js"></script>
+
+<!-- Custom JS -->
+<script src="../assets/js/custom.js"></script>
+  <!-- Lien vers Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script Google Maps -->
+  <script>
+    function initMap() {
+        // Créer une carte centrée sur une position par défaut (ici Paris)
+        const mapOptions = {
+                zoom: 12,
+                center: { lat: 48.8566, lng: 2.3522 } // Paris
+            };
+            const map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+            // Vérifier si la géolocalisation est supportée par le navigateur
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    // Récupérer la latitude et la longitude de la position actuelle
+                    const userLocation = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+
+                    // Placer un marqueur sur la carte à la position de l'utilisateur
+                    const marker = new google.maps.Marker({
+                        position: userLocation,
+                        map: map,
+                        title: "Vous êtes ici"
+                    });
+
+                    // Centrer la carte sur la position de l'utilisateur
+                    map.setCenter(userLocation);
+                }, function() {
+                    // En cas d'erreur de géolocalisation
+                    alert("Erreur de géolocalisation. Impossible de déterminer votre position.");
+                });
+            } else {
+                // Si la géolocalisation n'est pas supportée
+                alert("La géolocalisation n'est pas supportée par votre navigateur.");
+            }
+        }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+  <!-- Lien vers Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+</body>
+
+</html>
